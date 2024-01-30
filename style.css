@@ -1,0 +1,141 @@
+body{color: #222222; font-weight: 300; height: 100vh;}
+li{vertical-align: middle;}
+.wrap{max-width: 1280px; margin: 0 auto;}
+/* GNB */
+nav{
+     height: 40px;
+     display: flex;
+     justify-content: space-between;
+     align-items:center;
+     padding: 0 20px;
+}
+nav .name{
+     display: flex;
+     align-items: center;
+     gap: 1rem;
+     font-weight: 500;
+}
+nav .email{
+     font-weight: 500;
+}
+nav .email::before{
+     content: "O";
+     margin-right: 4px;
+     width: 16px;
+     height: 16px;
+     background-color: pink;
+     /* background-image: url("/mail.png");
+     background-repeat: no-repeat;
+     background-size: contain; */
+}
+/* 프로필 */
+/* .profile{width: 100%;}
+.subject{
+     font-size: 0.75rem;
+     font-weight: 500;
+     margin-top: 1rem;
+     color: #999999;
+}
+.profile-item .email, .profile-item .links, .profile-item .tags{
+     display: inline-block;
+     margin-top: 0.25rem;
+} */
+/* 링크 */
+.links li{
+     display: inline-block;
+}
+.links li a{
+     width: 30px;
+     height: 30px;
+     padding: 4px;
+     border-radius: 2px;
+}
+
+.links li a:hover{
+     background-color: #e0e0e0;
+}
+
+.links li a span{
+     display: inline-block;
+     width: 100%;
+     height: 100%;
+}
+
+.links li a #linkedin{
+     background-image: url("/linkedin.png");
+     background-repeat: no-repeat;
+     background-size: contain;
+}
+
+.links li a #blog{
+     background-image: url("/blog.png");
+     background-repeat: no-repeat;
+     background-size: contain;
+}
+/* 태그 */
+.tags li{
+     display: inline-block;
+}
+.tags li span{
+     border-radius: 2px;
+     padding: 2px 6px;
+     font-size: 12px;
+     background-color: #eee;
+}
+/* 프로젝트 */
+.project{
+     width: 100%;
+     font-size: 14px;
+}
+
+.project .project-year-list > p{
+     margin-top: 1.4rem;
+}
+.project .project-year-list .project-list{
+     margin-top: 0.3rem;
+     
+}
+.project .project-year-list .project-list .project-item{
+     margin-top: 0.25rem;
+     font-size: 12px;
+}
+/* 포트폴리오 */
+.pl{
+     margin: 0 auto;
+     width: 100%;
+     /* display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows: auto; */
+}
+.pl > li{
+     height: 300px;
+     background-image: url("testimage.png");
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position:center;
+     border-bottom: 1px solid;
+}
+.pl > li .pl-item{
+     width: 100%;
+     height: 100%;
+     background-color: #000;
+     opacity:0;
+     color: #222;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.pl > li .pl-item:hover{
+     opacity: .8;
+     color: #fff;
+}
+.pl > li .pl-item .pl-info{
+     text-align:center;
+}
+.pl > li .pl-item .pl-info .info-title{
+     font-weight: 500;
+}
+.pl > li .pl-item .pl-info .info-year{
+     font-size: 0.75rem;
+     color: #999;
+}

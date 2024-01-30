@@ -1,0 +1,203 @@
+@charset "UTF-8";
+ul, ol, li, dl, dt, dd, html, body, p, span, h1, h2, h3, h4, h5, h6, address, table, th, td, form, fieldset, input, textarea, select, div, button {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+
+a, span, ul, ol, div, li {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:after, :before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+  word-break: keep-all;
+  height: 100vh;
+  overflow: hidden; /*드래그 방지*/
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+body { /*드래그 방지*/
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+a {
+  color: #ffffff;
+}
+
+body {
+  font-weight: 300; /* 아이폰에 reset font가 설정이 안되는 경우를 위한 설정 */
+  -webkit-text-size-adjust: none;
+}
+
+a, div, p, li, th, td, h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+span {
+  font-weight: 400;
+}
+
+a, a:hover, a:active, a:focus {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+audio, canvas, video, progress {
+  vertical-align: baseline;
+}
+
+/* header, section, nav, footer, aside {margin: 0; padding: 0;} */
+article, aside, footer, header, nav, main, section, summary, details, hgroup {
+  display: block;
+}
+
+img, fieldset, iframe {
+  border: 0;
+}
+
+img {
+  max-width: 100%;
+  width: auto;
+}
+
+audio, canvas, video, progress {
+  display: inline-block;
+}
+
+figure, figcaption {
+  display: block;
+}
+
+ul, ol, dl, dt, dd, li {
+  list-style: none;
+}
+
+ul, ol {
+  display: inline-block;
+}
+
+a {
+  display: block;
+}
+
+table, th, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  text-wrap: nowrap;
+  background: inherit;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0;
+  overflow: visible;
+  cursor: pointer;
+}
+
+legend, address {
+  margin: 0;
+  padding: 0;
+}
+
+.dn {
+  display: none !important;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:after, blockquote:before, q:after, q:before {
+  content: "";
+  content: none;
+}
+
+input, select {
+  -o-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+/* reset.css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+p, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, select, button, code, label, em, span, strong { /* 단어 단위로 떨어져 내리게끔 */
+  word-break: keep-all;
+}
+
+img, fieldset {
+  border: 0; /* 익스플로러 하위 버전에서 a > img일 경우 보더가 생김 */
+}
+
+select::-ms-expand {
+  display: none; /* IE 셀렉박스 기본 화살표 제거 */
+}
