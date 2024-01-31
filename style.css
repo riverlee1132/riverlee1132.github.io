@@ -15,19 +15,26 @@ nav .name{
      gap: 1rem;
      font-weight: 500;
 }
-nav .email{
-     font-weight: 500;
+nav .contact{
+     height: 100%;
+     display: flex;
+     align-items: center;
+     gap: 8px;
 }
-nav .email::before{
-     content: "O";
-     margin-right: 4px;
+nav .contact .email-ico{
+     display: inline-block;
      width: 16px;
      height: 16px;
-     background-color: pink;
-     /* background-image: url("/mail.png");
+     background-image: url('/source/email.png');
      background-repeat: no-repeat;
-     background-size: contain; */
+     background-size: contain;
 }
+nav .contact .email{
+     font-weight: 500;
+     display: inline-block;
+}
+
+
 /* 프로필 */
 /* .profile{width: 100%;}
 .subject{
@@ -62,13 +69,13 @@ nav .email::before{
 }
 
 .links li a #linkedin{
-     background-image: url("/linkedin.png");
+     background-image: url("/source/linkedin.png");
      background-repeat: no-repeat;
      background-size: contain;
 }
 
 .links li a #blog{
-     background-image: url("/blog.png");
+     background-image: url("/source/blog.png");
      background-repeat: no-repeat;
      background-size: contain;
 }
@@ -109,7 +116,7 @@ nav .email::before{
 }
 .pl > li{
      height: 300px;
-     background-image: url("testimage.png");
+     background-image: url("/source/testimage.png");
      background-repeat: no-repeat;
      background-size: cover;
      background-position:center;
