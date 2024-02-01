@@ -1,9 +1,24 @@
-body{color: #222222; font-weight: 300; height: 100vh;}
-li{vertical-align: middle;}
-.wrap{max-width: 1280px; margin: 0 auto;}
+body{
+     width: 100%;
+     height: 100%;
+     color: #222222;
+     font-weight: 300;
+     overflow: auto;
+}
+span{
+     color: #222222;
+}
+li{
+     vertical-align: middle;
+}
+.wrap{
+     /* max-width: 1280px; */
+     margin: 0 auto;
+}
+
 /* GNB */
 nav{
-     height: 40px;
+     height: 50px;
      display: flex;
      justify-content: space-between;
      align-items:center;
@@ -13,7 +28,7 @@ nav .name{
      display: flex;
      align-items: center;
      gap: 1rem;
-     font-weight: 500;
+     font-weight: 600;
 }
 nav .contact{
      height: 100%;
@@ -21,128 +36,68 @@ nav .contact{
      align-items: center;
      gap: 8px;
 }
-nav .contact .email-ico{
-     display: inline-block;
-     width: 16px;
-     height: 16px;
-     background-image: url('/source/email.png');
-     background-repeat: no-repeat;
-     background-size: contain;
-}
-nav .contact .email{
-     font-weight: 500;
-     display: inline-block;
-}
 
-
-/* 프로필 */
-/* .profile{width: 100%;}
-.subject{
-     font-size: 0.75rem;
-     font-weight: 500;
-     margin-top: 1rem;
-     color: #999999;
-}
-.profile-item .email, .profile-item .links, .profile-item .tags{
-     display: inline-block;
-     margin-top: 0.25rem;
-} */
-/* 링크 */
-.links li{
-     display: inline-block;
-}
-.links li a{
-     width: 30px;
-     height: 30px;
-     padding: 4px;
-     border-radius: 2px;
-}
-
-.links li a:hover{
-     background-color: #e0e0e0;
-}
-
-.links li a span{
-     display: inline-block;
+/* 콘텐츠 */
+.contents{
      width: 100%;
      height: 100%;
+     display: grid;
+     grid-template-rows: 1fr 1fr 1fr;
 }
-
-.links li a #linkedin{
-     background-image: url("/source/linkedin.png");
-     background-repeat: no-repeat;
-     background-size: contain;
-}
-
-.links li a #blog{
-     background-image: url("/source/blog.png");
-     background-repeat: no-repeat;
-     background-size: contain;
-}
-/* 태그 */
-.tags li{
-     display: inline-block;
-}
-.tags li span{
-     border-radius: 2px;
-     padding: 2px 6px;
-     font-size: 12px;
-     background-color: #eee;
-}
-/* 프로젝트 */
-.project{
-     width: 100%;
-     font-size: 14px;
-}
-
-.project .project-year-list > p{
-     margin-top: 1.4rem;
-}
-.project .project-year-list .project-list{
-     margin-top: 0.3rem;
-     
-}
-.project .project-year-list .project-list .project-item{
-     margin-top: 0.25rem;
-     font-size: 12px;
-}
-/* 포트폴리오 */
-.pl{
-     margin: 0 auto;
-     width: 100%;
-     /* display: grid;
-     grid-template-columns: 1fr 1fr 1fr;
-     grid-template-rows: auto; */
-}
-.pl > li{
-     height: 300px;
-     background-image: url("/source/testimage.png");
-     background-repeat: no-repeat;
-     background-size: cover;
-     background-position:center;
-     border-bottom: 1px solid;
-}
-.pl > li .pl-item{
+.contents section{
      width: 100%;
      height: 100%;
-     background-color: #000;
-     opacity:0;
-     color: #222;
+     min-height: 600px;
      display: flex;
      align-items: center;
      justify-content: center;
 }
-.pl > li .pl-item:hover{
-     opacity: .8;
-     color: #fff;
+
+.pl{
+     min-height: 600px;
+     height: 100%;
+     background-color: pink;
+     text-align: center;
+     border-bottom: 1px solid;
 }
-.pl > li .pl-item .pl-info{
-     text-align:center;
+
+/* contacts */
+.contacts{
+     display: flex;
+     gap: 16px;
 }
-.pl > li .pl-item .pl-info .info-title{
-     font-weight: 500;
+.contacts > div{
+     display: flex;
+     align-items: center;
+     gap: 6px;
 }
-.pl > li .pl-item .pl-info .info-year{
-     font-size: 0.75rem;
-     color: #999;
+.contacts > div > a{
+     padding: 6px 20px;
+     display: flex;
+     align-items: center;
+     gap: 6px;
+     background-color: #e0e0e0;
+     border-radius: 30px;
+}
+
+.contacts > div > a:hover{
+     background-color: #222222;
+     color: #ffffff;
+}
+
+.contacts > div > a > .blog-ico{
+     display: inline-block;
+     background-image: url(./source/article_FILL0_wght400_GRAD0_opsz24.png);
+     background-size: contain;
+     background-repeat: no-repeat;
+     width: 16px;
+     height: 16px;
+}
+.contacts > div > .email-ico{
+     display: inline-block;
+     background-image: url("/source/mail_FILL0_wght400_GRAD0_opsz24.png");
+     background-repeat: no-repeat;
+     background-size: contain;
+     width: 16px;
+     height: 16px;
 }
