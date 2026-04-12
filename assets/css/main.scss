@@ -1,5 +1,9 @@
 ---
+# Only the main sidebar needs to be aware of what the site sections are
+search: false
 ---
+
+@charset "utf-8";
 
 @import "minimal-mistakes/skins/default";
 @import "minimal-mistakes";
