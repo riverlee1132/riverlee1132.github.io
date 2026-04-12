@@ -1,0 +1,7 @@
+theme: minimal-mistakes-jekyll
+
+title: riverlee
+description: UX/UI Designer Portfolio
+
+plugins:
+  - jekyll-include-cache
