@@ -6,7 +6,7 @@ description: UX/UI Designer Portfolio
 plugins:
   - jekyll-include-cache
 
-  defaults:
+defaults:
   - scope:
       path: ""
       type: posts
