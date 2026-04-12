@@ -5,6 +5,7 @@ description: UX/UI Designer Portfolio
 
 plugins:
   - jekyll-include-cache
+  - jekyll-remote-theme
 
 defaults:
   - scope:
