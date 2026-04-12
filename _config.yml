@@ -5,3 +5,11 @@ description: UX/UI Designer Portfolio
 
 plugins:
   - jekyll-include-cache
+
+  defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      author_profile: false
+      show_date: true
