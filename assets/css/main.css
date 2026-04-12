@@ -164,3 +164,10 @@
 h2.archive__subtitle {
   display: none;
 }
+
+/* ── Skip links 숨기기 ── */
+.skip-links,
+.skip-links a,
+[class*=skip] {
+  display: none !important;
+}
