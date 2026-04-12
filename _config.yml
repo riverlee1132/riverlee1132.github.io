@@ -14,3 +14,4 @@ defaults:
     values:
       author_profile: false
       show_date: true
+      paginate: 5

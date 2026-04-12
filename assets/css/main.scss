@@ -132,3 +132,23 @@ body {
   font-size: 13px;
   color: #aaa;
 }
+
+/* ── Skip links 숨기기 ── */
+.skip-links {
+  display: none;
+}
+
+/* ── Toggle menu 숨기기 ── */
+.greedy-nav__toggle {
+  display: none !important;
+}
+
+/* ── Recent Posts 헤더 숨기기 ── */
+.archive__subtitle,
+.list__item .archive__item-title {
+  font-size: 15px;
+}
+
+h2.archive__subtitle {
+  display: none;
+}
