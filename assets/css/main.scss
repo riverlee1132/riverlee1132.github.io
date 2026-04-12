@@ -1,2 +1,12 @@
+---
+# Only the main scripts.scss isn't compiled to _site/assets/js/main.min.js
+search: false
+---
+
+@charset "utf-8";
+
 $primary-color: #111;
 $link-color: #666;
+
+@import "minimal-mistakes/skins/default";
+@import "minimal-mistakes";
