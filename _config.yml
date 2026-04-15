@@ -1,20 +1,62 @@
 remote_theme: "mmistakes/minimal-mistakes"
 
+# ── 기본 정보 ──────────────────────────────────────
+locale:           "ko-KR"
+title:            "riverlee"
+title_separator:  "|"
+description:      "UX/UI 디자이너 riverlee의 블로그 — 디자인 시스템, Figma 플러그인, UX 이야기"
+url:              "https://riverlee1132.github.io"
+baseurl:          ""
+
+# ── SEO ────────────────────────────────────────────
+twitter:
+  username: riverlee1132
+og_image: /assets/images/og-image.png
+
+# ── 피드 숨기기 ─────────────────────────────────────
 atom_feed:
   hide: true
 
-title: riverlee
-description: UX/UI Designer Portfolio
-
+# ── 플러그인 ───────────────────────────────────────
 plugins:
   - jekyll-include-cache
   - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
 
+# ── 페이지네이션 ────────────────────────────────────
+paginate:      5
+paginate_path: "/page:num/"
+
+# ── 카테고리 / 태그 아카이브 ──────────────────────────
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# ── _pages 폴더 포함 ──────────────────────────────
+include:
+  - _pages
+
+# ── 기본값 ────────────────────────────────────────
 defaults:
   - scope:
       path: ""
       type: posts
     values:
+      layout: single
       author_profile: false
       show_date: true
-      paginate: 5
+      read_time: false
+      comments: false
+      share: false
+      related: false
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: false

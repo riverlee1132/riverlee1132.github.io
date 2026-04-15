@@ -1,0 +1,51 @@
+<!-- Pretendard Variable Font — 비동기 로딩 (렌더 블로킹 방지) -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preload"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+</noscript>
+
+<!-- SEO: canonical & open graph 보완 -->
+<meta name="theme-color" content="#534AB7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f0f0f"  media="(prefers-color-scheme: dark)">
+
+<!-- 이미지 Lazy Loading — native loading="lazy" + IntersectionObserver 폴백 -->
+<script>
+(function () {
+  function applyLazyLoad() {
+    var imgs = document.querySelectorAll('img:not([loading])');
+    if ('loading' in HTMLImageElement.prototype) {
+      // 네이티브 lazy loading 지원 브라우저
+      imgs.forEach(function (img) {
+        img.setAttribute('loading', 'lazy');
+      });
+    } else if ('IntersectionObserver' in window) {
+      // 폴백: IntersectionObserver
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var img = entry.target;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+            }
+            observer.unobserve(img);
+          }
+        });
+      }, { rootMargin: '200px 0px' });
+
+      imgs.forEach(function (img) { observer.observe(img); });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', applyLazyLoad);
+  } else {
+    applyLazyLoad();
+  }
+})();
+</script>
