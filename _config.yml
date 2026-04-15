@@ -1,5 +1,8 @@
 remote_theme: "mmistakes/minimal-mistakes"
 
+atom_feed:
+  hide: true
+
 title: riverlee
 description: UX/UI Designer Portfolio
 
