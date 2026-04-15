@@ -18,10 +18,12 @@
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   다크 모드 — prefers-color-scheme
+   다크 모드 — data-theme 수동 전환 + OS 폴백
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* JS가 없을 때 OS 설정을 따르는 폴백 */
 @media (prefers-color-scheme: dark) {
-  :root {
+  html:not([data-theme="light"]) {
     --bg:           #0f0f0f;
     --bg-secondary: #1c1c1c;
     --text:         #e4e4e4;
@@ -33,6 +35,20 @@
     --accent-hover: #a9a4f5;
     --shadow:       rgba(0, 0, 0, 0.4);
   }
+}
+
+/* JS 토글로 설정한 다크 모드 */
+html[data-theme="dark"] {
+  --bg:           #0f0f0f;
+  --bg-secondary: #1c1c1c;
+  --text:         #e4e4e4;
+  --text-muted:   #999999;
+  --text-faint:   #555555;
+  --border:       #2a2a2a;
+  --border-light: #222222;
+  --accent:       #8b84f0;
+  --accent-hover: #a9a4f5;
+  --shadow:       rgba(0, 0, 0, 0.4);
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -490,4 +506,41 @@ h2.archive__subtitle {
 
 .list__item .archive__item-title {
   font-size: 15px;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   다크/라이트 모드 토글 버튼
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  margin-left: 12px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: color 0.15s ease, background 0.15s ease;
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+#theme-toggle:hover {
+  color: var(--text);
+  background: var(--bg-secondary);
+}
+
+/* 라이트 모드: 달 아이콘 표시 (클릭 시 다크로) */
+#theme-toggle .icon-sun  { display: none; }
+#theme-toggle .icon-moon { display: block; }
+
+/* 다크 모드: 해 아이콘 표시 (클릭 시 라이트로) */
+html[data-theme="dark"] #theme-toggle .icon-sun  { display: block; }
+html[data-theme="dark"] #theme-toggle .icon-moon { display: none; }
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) #theme-toggle .icon-sun  { display: block; }
+  html:not([data-theme="light"]) #theme-toggle .icon-moon { display: none; }
 }
