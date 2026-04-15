@@ -57,8 +57,12 @@
   /* ── 버튼 주입 ── */
   function injectToggle() {
     if (document.getElementById('theme-toggle')) return;
-    var nav = document.querySelector('.greedy-nav');
-    if (!nav) return;
+
+    // greedy-nav JS가 overflow 항목을 숨기는 것을 피해
+    // .masthead__inner-wrap 에 직접 추가
+    var wrap = document.querySelector('.masthead__inner-wrap')
+            || document.querySelector('.masthead')
+            || document.body;
 
     var btn = document.createElement('button');
     btn.id = 'theme-toggle';
@@ -68,7 +72,7 @@
       setTheme(getTheme() === 'dark' ? 'light' : 'dark');
     });
 
-    nav.appendChild(btn);
+    wrap.appendChild(btn);
   }
 
   /* ── 이미지 Lazy Loading ── */
