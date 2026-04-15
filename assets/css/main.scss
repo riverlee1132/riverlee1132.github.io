@@ -171,12 +171,22 @@ a:hover {
   text-decoration: none;
 }
 
+.visible-links {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .visible-links a {
   font-size: 14px;
   color: var(--text-muted) !important;
   text-decoration: none;
   padding: 0 !important;
   margin-left: 24px;
+  white-space: nowrap;
   transition: color 0.15s ease;
 }
 
@@ -188,13 +198,6 @@ a:hover {
   .visible-links a {
     margin-left: 16px;
     font-size: 13px;
-  }
-}
-
-/* 모바일에서도 내비 표시 유지 */
-@media (max-width: 768px) {
-  .greedy-nav .visible-links {
-    display: flex !important;
   }
 }
 
